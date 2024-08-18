@@ -1,7 +1,21 @@
-<h1><%= @person.name %></h1>
-<h2><%= @person.byline %></h2>
-<h3><%= @person.date_of_passing %></h3>
-
-<p>
-    <%= @person.about %>
-</p>
+<div class="row mt-5">
+    <div class="col">
+        <%#
+        <img class="img-fluid rounded" src="https://media.newyorker.com/photos/59712008097a6b51ed4d3bb0/master/pass/Petrusich-Chester-Bennington.jpg" alt="">
+        %>
+    </div>
+    <div class="col text-center">
+        <div>
+            <%= link_to "Back", root_url, class: "link-secondary link-underline-opacity-25 link-underline-opacity-75-hover link-offset-2 link-opacity-50 link-opacity-100-hover" %>
+        </div>
+        <h1 class="display-2"><%= @person.name %></h1>
+        <div>
+            <h3 class="text-secondary"><%= @person.byline %></h3>
+            <h6>Passed away on <%= @person.date_of_passing %></h6>
+        </div>
+        <hr/>
+        <p class="text-start">
+            <%= @person.about %>
+        </p>
+    </div>
+</div>
