@@ -1,0 +1,47 @@
+<div class="row mt-5">
+    <div class="col-6 offset-3">
+        <div class="row">
+            <div class="col">
+                <% if person.errors.any?  %>
+                    <div class="alert alert-danger">
+                        <h4>Errors</h4>
+                        <ul>
+                            <% person.errors.each do |error| %>
+                                <li><%= error.full_message %></li>
+                            <% end %>
+                        </ul>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <%= form_with model: person do |form| %>
+                    <div class="mb-3">
+                        <%= form.label :name, class: "form-label" %>
+                        <%= form.text_field :name, class: "form-control" %>
+                    </div>
+
+                    <div class="mb-3">
+                        <%= form.label :byline, class: "form-label" %>
+                        <%= form.text_field :byline, class: "form-control" %>
+                    </div>
+
+                    <div class="mb-5">
+                        <%= form.label :date_of_passing, class: "form-label" %>
+                        <%= form.date_field :date_of_passing, class: "form-control" %>
+                    </div>
+
+                    <div class="mb-3">
+                        <%= form.label :about, class: "form-label" %>
+                        <%= form.text_area :about, class: "form-control", rows: 10 %>
+                    </div>
+
+                    <div>
+                        <%= form.submit "Save", class: "btn btn-primary" %>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>
