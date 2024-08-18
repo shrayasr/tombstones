@@ -8,6 +8,7 @@
             <div class="card text-center border-0">
                 <div class="card-body">
                     <h2 class="card-title"><%= person.name %></h2>
+                    <p class="text-secondary"><%= person.byline %></p>
                     <h6 class="card-subtitle mb-2 text-body-secondary"><%= Date::MONTHNAMES[person.date_of_passing.month] %> <%= person.date_of_passing.year %></h6>
                     <%= link_to "", person, class: "stretched-link" %>
                 </div>
