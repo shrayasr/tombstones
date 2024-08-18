@@ -1,0 +1,10 @@
+<h1>Silence</h1>
+
+<ul>
+    <% @people.each do |person| %>
+        <li>
+            <h3><%= Date::MONTHNAMES[person.date_of_passing.month] %> <%= person.date_of_passing.year %></h3>
+            <h2><%= person.name %></h2>
+        </li>
+    <% end %>
+</ul>
