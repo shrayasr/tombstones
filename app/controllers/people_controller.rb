@@ -1,4 +1,7 @@
 class PeopleController < ApplicationController
+  def index
+    redirect_to root_url, status: :moved_permanently
+  end
   def show
     @person = Person.find(params[:id])
   end
