@@ -1,15 +1,18 @@
 <h1 class="display-1 text-center mt-5">Silence</h1>
+<p class="lead text-center mb-5">A moment of silence for those that have meant something to me</p>
 
-<% @people.each do |person| %>
-<div class="row mt-4">
-    <div class="col-6 offset-3">
-        <div class="card text-center border-0">
-            <div class="card-body">
-                <h2 class="card-title"><%= person.name %></h2>
-                <h6 class="card-subtitle mb-2 text-body-secondary"><%= Date::MONTHNAMES[person.date_of_passing.month] %> <%= person.date_of_passing.year %></h6>
-                <%= link_to "", person, class: "stretched-link" %>
+<div id="people">
+    <% @people.each do |person| %>
+    <div class="row mt-4">
+        <div class="col-6 offset-3">
+            <div class="card text-center border-0">
+                <div class="card-body">
+                    <h2 class="card-title"><%= person.name %></h2>
+                    <h6 class="card-subtitle mb-2 text-body-secondary"><%= Date::MONTHNAMES[person.date_of_passing.month] %> <%= person.date_of_passing.year %></h6>
+                    <%= link_to "", person, class: "stretched-link" %>
+                </div>
             </div>
         </div>
     </div>
+    <% end %>
 </div>
-<% end %>
