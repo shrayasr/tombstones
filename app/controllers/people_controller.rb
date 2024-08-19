@@ -1,4 +1,6 @@
 class PeopleController < ApplicationController
+  http_basic_authenticate_with name: "2b", password: "in the end it doesn't even matter", except: [ :index, :show ]
+
   def index
     redirect_to root_url, status: :moved_permanently
   end
