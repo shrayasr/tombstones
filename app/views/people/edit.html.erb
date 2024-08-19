@@ -1,1 +1,11 @@
 <%= render "form", person: @person%>
+
+<div class="row mt-5 mb-5">
+    <div class="col-6 offset-3">
+        <hr/>
+        <%= link_to "Destroy", person_url(@person), class: "link-danger link-underline-opacity-25 link-underline-opacity-75-hover link-offset-2 link-opacity-50 link-opacity-100-hover", data: {
+                            turbo_method: :delete,
+                            turbo_confirm: "Are you sure to delete?"
+                        }%>
+    </div>
+</div>
