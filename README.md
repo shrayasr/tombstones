@@ -9,4 +9,6 @@ Building this out with RoR to understand 'convention over configuration' style o
 - [ ] Attach images to people
 - [ ] Take basic auth from configuration instead of hardcode
 - [ ] Check responsiveness 
+- [ ] Setup SQLite in WAL mode
 - [ ] Domain & Deploy
+- [ ] Configure Litestream
