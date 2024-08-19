@@ -1,24 +1,12 @@
-# README
+# Silence
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The web version of https://github.com/shrayasr/silence-web
 
-Things you may want to cover:
+Building this out with RoR to understand 'convention over configuration' style of building web apps.
 
-* Ruby version
+## TODO 
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- [ ] Attach images to people
+- [ ] Take basic auth from configuration instead of hardcode
+- [ ] Check responsiveness 
+- [ ] Domain & Deploy
