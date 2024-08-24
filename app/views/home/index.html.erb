@@ -20,7 +20,9 @@
 
 <div class="row mt-md-3 mb-md-3">
     <div class="col col-md-6 offset-md-3 text-center">
-        <hr/>
+        <% if @people.any? %>
+            <hr/>
+        <% end %>
         <%= link_to "New", new_person_url, class: "link-primary link-underline-opacity-25 link-underline-opacity-75-hover link-offset-2 link-opacity-50 link-opacity-100-hover" %>
     </div>
 </div>
