@@ -10,6 +10,7 @@ Building this out with RoR to understand 'convention over configuration' style o
 - [X] Take basic auth from configuration instead of hardcode
 - [X] Check responsiveness 
 - [X] [Setup SQLite in WAL mode](https://stackoverflow.com/a/56286515)
-- [ ] Add links to new and edit
+- [X] Add links to new and edit
+- [ ] Allow empty lines in about
 - [ ] Domain & Deploy
 - [ ] Configure Litestream
