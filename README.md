@@ -15,6 +15,10 @@ Building this out with RoR to understand 'convention over configuration' style o
       <img src="https://github.com/user-attachments/assets/3f9d7662-7418-4ef6-be4a-116907692a15" />
     </td>
   </tr>
+  <tr>
+    <th>Home page</th>
+    <th>Individual page</th>
+  </tr>
 </table>
 
 ## TODO 
