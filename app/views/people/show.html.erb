@@ -1,16 +1,20 @@
 <div class="row mt-5">
+    <div class="col">
+        <div class="mb-2 mb-md-0">
+            <%= link_to "Back", root_url, class: "link-secondary link-underline-opacity-25 link-underline-opacity-75-hover link-offset-2 link-opacity-50 link-opacity-100-hover" %>
+        </div>
+    </div>
+</div>
+<div class="row">
     <% if @person.photo.attached? %>
-        <div class="col">
+        <div class="col-12 col-md-6">
             <%= image_tag @person.photo, class: "img-fluid rounded" %>
         </div>
     <% end %>
     <div class="col text-start">
+        <h1 class="mb-2 mb-md-0 display-2"><%= @person.name %></h1>
         <div>
-            <%= link_to "Back", root_url, class: "link-secondary link-underline-opacity-25 link-underline-opacity-75-hover link-offset-2 link-opacity-50 link-opacity-100-hover" %>
-        </div>
-        <h1 class="display-2"><%= @person.name %></h1>
-        <div>
-            <h3 class="text-secondary"><%= @person.byline %></h3>
+            <h3 class="text-secondary mb-2 mb-md-0"><%= @person.byline %></h3>
             <h6>Passed away on <%= @person.date_of_passing %></h6>
         </div>
         <hr/>
