@@ -15,6 +15,10 @@ class PeopleController < ApplicationController
   def create
     @person = Person.new(person_params)
 
+    if params[:photo].present?
+      @person.photo.attach(params[:photo])
+    end
+
     if @person.save
       redirect_to @person
     else
@@ -29,6 +33,11 @@ class PeopleController < ApplicationController
   def update
     @person = Person.find(params[:id])
 
+    if params[:photo].present?
+      @person.photo.purge if @person.photo.attached?
+      @person.photo.attach(params[:photo])
+    end
+
     if @person.update(person_params)
       redirect_to @person
     else
@@ -38,12 +47,17 @@ class PeopleController < ApplicationController
 
   def destroy
     @person = Person.find(params[:id])
+
+    if @person.photo.attached?
+      @person.photo.purge
+    end
+
     @person.destroy
 
     redirect_to root_url, status: :see_other
   end
 
   private def person_params
-    params.require(:person).permit(:name, :date_of_passing, :byline, :about)
+    params.require(:person).permit(:name, :date_of_passing, :byline, :about, :photo)
   end
 end
