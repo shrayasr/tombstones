@@ -1,18 +1,13 @@
 <div class="row mt-5">
-    <div class="col">
-        <div class="mb-2">
-            <%= link_to "Back", root_url, class: "link-secondary link-underline-opacity-25 link-underline-opacity-75-hover link-offset-2 link-opacity-50 link-opacity-100-hover" %>
-        </div>
-    </div>
-</div>
-
-<div class="row">
     <% if @person.photo.attached? %>
         <div class="col-12 col-md-6">
             <%= image_tag @person.photo, class: "img-fluid rounded" %>
         </div>
     <% end %>
-    <div class="col text-start">
+    <div class="<%= @person.photo.attached? ? 'col' : 'col-6 offset-3' %> text-start">
+        <div class="mb-2">
+            <%= link_to "Back", root_url, class: "link-secondary link-underline-opacity-25 link-underline-opacity-75-hover link-offset-2 link-opacity-50 link-opacity-100-hover" %>
+        </div>
         <h1 class="mb-2 display-2"><%= @person.name %></h1>
         <div>
             <h3 class="text-secondary mb-2"><%= @person.byline %></h3>
@@ -20,14 +15,9 @@
         </div>
         <hr/>
         <p class="text-start">
-            <%= @person.about %>
+            <%= simple_format(@person.about) %>
         </p>
         <hr/>
         <%= link_to "Edit", edit_person_url, class: "link-primary link-underline-opacity-25 link-underline-opacity-75-hover link-offset-2 link-opacity-50 link-opacity-100-hover" %>
-    </div>
-</div>
-
-<div class="row mt-md-3 mb-md-3">
-    <div class="col">
     </div>
 </div>
