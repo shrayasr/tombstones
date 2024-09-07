@@ -1,10 +1,10 @@
-<h1 class="display-1 text-center mt-5">Silence</h1>
+<h1 class="display-1 text-center mt-5">Tombstones</h1>
 <p class="lead text-center mb-5">A moment of silence for those that have meant something to me</p>
 
 <div id="people">
-    <% @people.each do |person| %>
     <div class="row mt-4">
-        <div class="col-md-6 offset-md-3 col-12">
+    <% @people.each do |person| %>
+        <div class="col-md-6 col-xl-4 col-12">
             <div class="card text-center border-0">
                 <div class="card-body">
                     <h2 class="card-title"><%= person.name %></h2>
@@ -14,8 +14,8 @@
                 </div>
             </div>
         </div>
-    </div>
     <% end %>
+    </div>
 </div>
 
 <div class="row mt-md-3 mb-md-3">
