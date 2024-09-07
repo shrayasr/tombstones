@@ -9,8 +9,8 @@ local:
 # Use bin/rails credentials:edit to set the AWS secrets (as aws:access_key_id|secret_access_key)
 b2:
   service: S3
-  access_key_id: <%= ENV["B2_ACCESS_KEY_ID"] %>
-  secret_access_key: <%= ENV["B2_SECRET"] %>
+  access_key_id: <%= Rails.application.credentials.b2[:access_key] %>
+  secret_access_key: <%= Rails.application.credentials.b2[:secret] %>
   endpoint:  https://s3.us-west-000.backblazeb2.com
   region: us-west-000
   bucket: silence

@@ -1,5 +1,5 @@
 class PeopleController < ApplicationController
-  http_basic_authenticate_with name: ENV["AUTH_NAME"], password: ENV["AUTH_PASSWORD"], except: [ :index, :show ]
+  http_basic_authenticate_with name: Rails.application.credentials.basic[:username], password: Rails.application.credentials.basic[:password], except: [ :index, :show ]
 
   def index
     redirect_to root_url, status: :moved_permanently
