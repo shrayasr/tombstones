@@ -67,3 +67,5 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "activerecord-enhancedsqlite3-adapter", "~> 0.8.0"
