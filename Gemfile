@@ -43,6 +43,9 @@ gem "image_processing", ">= 1.2"
 
 gem "aws-sdk-s3", require: false
 
+# Needed until Ruby 3.3.4 is released https://github.com/ruby/ruby/pull/11006
+gem "net-pop", github: "ruby/net-pop"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
