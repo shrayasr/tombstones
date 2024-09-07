@@ -1,6 +1,6 @@
-# Silence
+# Tombstones
 
-The web version of https://github.com/shrayasr/silence-web
+The web version of https://github.com/shrayasr/silence
 
 Building this out with RoR to understand 'convention over configuration' style of building web apps.
 
@@ -29,6 +29,6 @@ Building this out with RoR to understand 'convention over configuration' style o
 - [X] [Setup SQLite in WAL mode](https://stackoverflow.com/a/56286515)
 - [X] Add links to new and edit
 - [X] Allow empty lines in about
-- [ ] Rename app to "Tombstones"
+- [X] Rename app to "Tombstones"
 - [ ] Domain & Deploy
 - [ ] Configure Litestream
