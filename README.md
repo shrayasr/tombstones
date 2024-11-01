@@ -21,6 +21,17 @@ Building this out with RoR to understand 'convention over configuration' style o
   </tr>
 </table>
 
+## Running the project
+
+- Run a docker build
+  ```
+  docker build -t tombstones .
+  ```
+- Run tombstones
+  ```
+  docker run -p 8888:3000 --name tombstones -v ./prod:/rails/prod -e RAILS_MASTER_KEY=<fill> -e TOMBSTONES_DB_FOLDER=./prod tombstones
+  ```
+
 ## TODO 
 
 - [X] Attach images to people
