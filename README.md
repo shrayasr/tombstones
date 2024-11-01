@@ -41,5 +41,6 @@ Building this out with RoR to understand 'convention over configuration' style o
 - [X] Add links to new and edit
 - [X] Allow empty lines in about
 - [X] Rename app to "Tombstones"
+- [X] Dockerize
 - [ ] Domain & Deploy
 - [ ] Configure Litestream
