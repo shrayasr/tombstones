@@ -18,6 +18,9 @@
             <%= simple_format(@person.about) %>
         </p>
         <hr/>
-        <%= link_to "Edit", edit_person_url, class: "link-primary link-underline-opacity-25 link-underline-opacity-75-hover link-offset-2 link-opacity-50 link-opacity-100-hover" %>
+        <%= link_to "Edit",
+            edit_person_url,
+            class: "link-primary link-underline-opacity-25 link-underline-opacity-75-hover link-offset-2 link-opacity-50 link-opacity-100-hover",
+            data: { turbo_prefetch: :false } %>
     </div>
 </div>
