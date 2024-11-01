@@ -31,4 +31,5 @@ test:
 # ensure the database is located in a persisted volume.
 production:
   <<: *default
+  database: <%= File.join(ENV.fetch("TOMBSTONES_DB_FOLDER") { "storage" }, "tombstones.sqlite3") %>
   # database: path/to/persistent/storage/production.sqlite3
